@@ -1,0 +1,184 @@
+@import '../_var'
+body
+    background: var(--bgcolor)
+
+
+.content
+    .logo
+        margin-bottom: 40px
+        img
+            width: 100px
+    h1
+        color: $white
+    .back-btn
+        color: var(--primary)
+        border: 1px solid var(--primary)
+        // border-width: 2px
+        border-width: 0.1em
+        border-radius: 25px
+        padding: 12px 18px
+        font-weight: 500
+        text-transform: capitalize
+        width: 181px
+        position: relative
+        transition: all ease 0.4s
+        overflow: hidden
+        margin: auto
+        &:hover::after
+            bottom: 0
+            border-radius: 0
+            transition: all ease 0.4s
+        &::after
+            content: ""
+            position: absolute
+            height: 100%
+            width: 100%
+            background-color: $primary
+            left: 0
+            bottom: -100%
+            border-radius: 50%
+            // visibility: hidden
+        &:hover a
+            color: $black
+        a
+            border-radius: 25px
+            // padding: 14px 24px
+            font-family: Poppins
+            font-weight: 600
+            font-size: 16px
+            line-height: 16px
+            text-align: center
+            text-decoration: none
+            color: var(--primary)
+            z-index: 9  
+            position: relative
+.banner
+    &.thanks-banner
+        height: calc(100vh - var(--headerheight))
+        display: flex
+        align-items: center
+        justify-content: center
+        .content
+            h1
+                margin-bottom: 18px
+                line-height: 1
+                text-align: center
+                margin: auto
+            h6,p
+                max-width: 450px
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 28px
+
+.faq-secA
+    padding: 56px 0 158px
+    @include media(991)
+        padding: 55px 0
+    .flex
+        .colA,.colB
+            position: sticky
+            top: calc(var(--headerfixed) + 20px)
+            height: 100%
+        .colA
+            flex: 0 1 30%
+            background: #F1F1F1
+            padding: 25px
+            @include media(767)
+                display: none
+            .faq-tab-nav
+                li
+                    color: $text
+                    @include font(500)
+                    transition: .5s ease
+                    &:not(:last-child)
+                        margin-bottom: 24px
+                        @include media(1024)
+                            margin-bottom: 12px
+                    &:hover,&.active
+                        color: $black
+        .colB
+            flex: 1
+            padding-left: 2rem
+            @include media(767)
+                padding-left: 0
+            .title-tab-faq
+                font-size: 24px
+                padding-bottom: 24px
+                @include font(500)
+                @include media(767)
+                    display: block
+                    margin-bottom: 15px
+                @include media(675)
+                    text-align: center
+            .faq-tab-nav-content
+                .tabs
+                    transition: .5s ease
+                    @include media(767)
+                        position: unset
+                        opacity: 1
+                        transform: translateY(0px)
+                    &:not(.active)
+                        transform: translateY(20px)
+                        @include media(767)
+                            transform: translateY(0px)
+                            pointer-events: all
+                            unicode-range: auto
+                    &:not(:last-child)
+                        @include media(767)
+                            margin-bottom: 50px
+                    .faq-content
+                        .col
+                            border: 1px solid #CCCCCC
+                            border-radius: 5px
+                            --padlr: 26px
+                            &:not(:last-child)
+                                margin-bottom: 15px
+                            &.active
+                                .title
+                                    border-color: $black
+                                    h6
+                                        color: $black
+                                    .ico
+                                        rotate: -90deg
+                                        background-image: url(../../icon/arrow-down-black.svg)
+                            .title
+                                @include flex
+                                overflow: hidden
+                                align-items: center
+                                padding: 15px var(--padlr)
+                                cursor: pointer
+                                h6
+                                    font-size: 16px
+                                    line-height: 1.5
+                                    flex: 1
+                                    color: $text
+                                    padding-right: 1rem
+                                .ico
+                                    flex: 0 1 auto
+                                    width: 15px
+                                    height: 15px
+                                    background-image: url(../../icon/arrow-down-gray.svg)
+                                    background-repeat: no-repeat
+                                    background-size: 100% auto
+                                    background-position: 0 50%
+                                    transition: .5s ease
+                            article
+                                .content-desc
+                                    padding: 0 var(--padlr) 30px
+                                    @include media(675)
+                                        padding: 20px 0 10px
+                                    > *
+                                        color: $text
+                                    p,ul
+                                        margin-bottom: 20px
+                                        @include media(675)
+                                            margin-bottom: 15px
+                                    ul
+                                        padding-left: 30px
+                                        padding-left: 20px
+                                        li
+                                            list-style: disc
+                                            &::marker
+                                                color: $black
+                                            &:not(:last-child)
+                                                margin-bottom: 5px

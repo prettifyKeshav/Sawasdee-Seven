@@ -1,0 +1,487 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.sectionA {
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 0;
+}
+.sectionA .home-first-banner {
+  height: 100vh;
+  background: var(--secondary);
+}
+@media only screen and (max-width: 991px) {
+  .sectionA .home-first-banner .first-bg {
+    height: 722px;
+  }
+}
+.sectionA .home-first-banner .first-bg img {
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .sectionA .home-first-banner .first-bg img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.sectionA .home-first-banner .first-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media only screen and (max-width: 540px) {
+  .sectionA .home-first-banner .first-wrapper {
+    top: 50%;
+  }
+}
+
+.home-secB {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.home-secB .video-bg {
+  line-height: 0;
+  position: relative;
+}
+.home-secB .video-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 249, 232, 0.8588235294);
+}
+.home-secB .video-bg video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-secB .content-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 500px;
+}
+.home-secB .content-wrapper h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  margin: 10px 0 20px 0px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.home-secB .content-wrapper p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.home-secC {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../../images/home/Banners/banner-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-secC .flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 80%;
+  margin: auto;
+}
+.home-secC .flex-box .flex-item:first-child {
+  width: 477px;
+  height: 469px;
+  background-image: url("../../images/chakra.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.home-secC .flex-box .flex-item:last-child {
+  visibility: hidden;
+}
+.home-secC .flex-box .content {
+  max-width: 60%;
+  margin: auto;
+}
+.home-secC .flex-box .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home-secC .flex-box .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+.home-secC .hand-img {
+  width: 100%;
+}
+.home-secC .hand-img img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.home-secD {
+  height: 100vh;
+  width: 100%;
+}
+.home-secD figure {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.home-secD figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 246, 218, 0.57) 53.85%, rgba(255, 232, 167, 0.95) 100%);
+}
+.home-secD .figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+}
+.home-secD .figcaption .content {
+  max-width: 355px;
+  text-align: center;
+}
+.home-secD .figcaption .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.home-secD .figcaption .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.home-secE {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../../images/home/Banners/banner-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-secE .flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 80%;
+  margin: auto;
+}
+.home-secE .flex-box .flex-item:first-child {
+  width: 477px;
+  height: 469px;
+  background-image: url("../../images/chakra.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.home-secE .flex-box .flex-item:last-child {
+  visibility: hidden;
+}
+.home-secE .flex-box .content {
+  max-width: 80%;
+  margin: auto;
+}
+.home-secE .flex-box .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home-secE .flex-box .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.home-secF {
+  height: 100vh;
+  width: 100%;
+}
+.home-secF figure {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.home-secF figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3019607843);
+}
+.home-secF .figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-secF .figcaption .content {
+  max-width: 355px;
+  text-align: center;
+}
+.home-secF .figcaption .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--white);
+}
+.home-secF .figcaption .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  max-width: 355px;
+}
+
+.home-secG {
+  height: 100vh;
+  width: 100%;
+}
+.home-secG figure {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.home-secG figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(255, 246, 218, 0) 53.85%, rgba(255, 232, 167, 0.95) 100%);
+}
+.home-secG .figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+}
+.home-secG .figcaption .content {
+  max-width: 390px;
+  text-align: center;
+}
+.home-secG .figcaption .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+.home-secG .figcaption .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+
+.home-secH {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../../images/home/Banners/banner-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-secH .flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 80%;
+  margin: auto;
+}
+.home-secH .flex-box .flex-item:first-child {
+  width: 477px;
+  height: 469px;
+  background-image: url("../../images/chakra.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.home-secH .flex-box .flex-item:last-child {
+  visibility: hidden;
+}
+.home-secH .flex-box .content {
+  max-width: 60%;
+  margin: auto;
+}
+.home-secH .flex-box .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home-secH .flex-box .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+.home-secH .qutub-minar {
+  width: 100%;
+}
+.home-secH .qutub-minar img {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  width: 30%;
+}
+
+.home-secI {
+  height: 100vh;
+  width: 100%;
+}
+.home-secI figure {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.home-secI figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 246, 218, 0) 37.98%, rgba(255, 255, 255, 0.95) 78.05%);
+}
+.home-secI .figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+}
+.home-secI .figcaption .content {
+  max-width: 390px;
+  text-align: center;
+}
+.home-secI .figcaption .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.home-secI .figcaption .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
+.fake-section {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: gray;
+}/*# sourceMappingURL=home.css.map */
