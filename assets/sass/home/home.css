@@ -474,6 +474,363 @@
   text-align: center;
 }
 
+.home-secJ {
+  height: 100vh;
+  width: 100%;
+}
+.home-secJ figure {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.home-secJ figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 21.95%, rgba(255, 246, 218, 0) 62.02%);
+}
+.home-secJ .figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-secJ .figcaption .content {
+  max-width: 355px;
+  text-align: center;
+}
+.home-secJ .figcaption .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.home-secJ .figcaption .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  max-width: 355px;
+}
+
+.home-secK {
+  height: 100vh;
+  width: 100%;
+}
+.home-secK figure {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  height: 100vh !important;
+}
+.home-secK figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 246, 218, 0) 37.98%, rgba(255, 255, 255, 0.95) 78.05%);
+}
+.home-secK .figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+}
+.home-secK .figcaption .content {
+  max-width: 390px;
+  text-align: center;
+}
+.home-secK .figcaption .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.home-secK .figcaption .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.home-secL {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../../images/home/Banners/banner-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-secL .flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 80%;
+  margin: auto;
+}
+.home-secL .flex-box .flex-item:first-child {
+  width: 477px;
+  height: 469px;
+  background-image: url("../../images/chakra.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.home-secL .flex-box .flex-item:last-child {
+  visibility: hidden;
+}
+.home-secL .flex-box .content {
+  max-width: 100%;
+  margin: auto;
+}
+.home-secL .flex-box .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home-secL .flex-box .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.home-secM {
+  position: relative;
+}
+.home-secM .figure {
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+}
+.home-secM .figure video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  line-height: 0;
+}
+.home-secM .figure-img {
+  color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.home-secM .figure-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-secN {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../../images/home/Banners/banner-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-secN .flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 80%;
+  margin: auto;
+}
+.home-secN .flex-box .flex-item:first-child {
+  width: 477px;
+  height: 469px;
+  background-image: url("../../images/chakra.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.home-secN .flex-box .flex-item:last-child {
+  visibility: hidden;
+}
+.home-secN .flex-box .content {
+  max-width: 100%;
+  margin: auto;
+}
+.home-secN .flex-box .content h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home-secN .flex-box .content p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.home-secO {
+  position: relative;
+}
+.home-secO .figure {
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+}
+.home-secO .figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home-secP {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../../images/home/Banners/banner-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-secP .form-sec {
+  max-width: 50%;
+  padding: 60px 0;
+  margin: auto;
+  text-align: center;
+}
+.home-secP .form-sec h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 60%;
+  line-height: 1.1;
+  margin: 20px auto;
+}
+.home-secP .form-sec form {
+  padding: 50px 0;
+}
+.home-secP .form-sec form .form-grid {
+  --item: 2;
+}
+.home-secP .form-sec form .submit-btn {
+  background: #D6AE3A;
+  width: 161px;
+  height: 40px;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+}
+.home-secP .form-sec form .submit-btn:hover {
+  background: #e1ac0a;
+}
+
+.home-secQ {
+  background: var(--white);
+  position: relative;
+}
+.home-secQ .container {
+  padding: 100px 0;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+.home-secQ .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.home-secQ .flex-box .flex-box-item {
+  width: 50%;
+  overflow: hidden;
+}
+.home-secQ .flex-box .flex-box-item:first-child {
+  border-radius: 10px;
+}
+.home-secQ .flex-box .flex-box-item:last-child h2 {
+  font-family: Florania Trial;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.home-secQ .flex-box .flex-box-item:last-child p {
+  font-family: Circular Pro;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+}
+.home-secQ .flex-box .flex-box-item:last-child a {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1px;
+  padding: 5px 16px;
+  margin: auto;
+  margin-top: 30px;
+}
+.home-secQ .flex-box .flex-box-item:last-child a img {
+  width: 16px;
+}
+.home-secQ .flex-box .flex-box-item:last-child a p {
+  font-family: Circular Pro;
+  font-weight: 450px;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+}
+
 .sticky {
   position: sticky;
   top: 20px;
