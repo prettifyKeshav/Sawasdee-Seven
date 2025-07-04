@@ -134,17 +134,32 @@ header
                 //     .svg
                 //         width: 23px
                 //         height: 23px
+                // .ham-btn
+                //     width: 54px
+                //     height: 20px
+                //     --border: 4px
+                //     border-top: var(--border) solid var(--elementcolor)
+                //     border-bottom: var(--border) solid var(--elementcolor)
+                //     transition: .5s ease
+                //     &:hover
+                //         border-color: var(--elementhover)
+                //     @include media(540)
+                //         width: 35px
                 .ham-btn
-                    width: 54px
-                    height: 20px
-                    --border: 4px
-                    border-top: var(--border) solid var(--elementcolor)
-                    border-bottom: var(--border) solid var(--elementcolor)
-                    transition: .5s ease
-                    &:hover
-                        border-color: var(--elementhover)
-                    @include media(540)
-                        width: 35px
+                    flex: 0 1 auto
+                    line-height: 0
+                    height: 22px
+                    width: 42px
+                    margin-left: auto
+                    flex-direction: column
+                    gap: 8px
+                    --lineheight: 2px
+                    display: flex
+                    span
+                        display: block
+                        height: var(--lineheight)
+                        width: inherit
+                        background: var(--black)
         .nav-a
             .enq
                 width: 137px
@@ -156,27 +171,12 @@ header
                 position: relative
                 transition: all ease 0.4s
                 overflow: hidden
-
-                &:hover::after
-                    bottom: 0
-                    border-radius: 0
-                    transition: all ease 0.4s
-                &::after
-                    content: ""
-                    position: absolute
-                    height: 100%
-                    width: 100%
-                    background-color: $primary
-                    left: 0
-                    bottom: -100%
-                    border-radius: 50%
-                    // visibility: hidden
                 &:hover a
                     color: $black
                 a
                     border-radius: 25px
                     // padding: 14px 24px
-                    font-family: Poppins
+                    font-family: $Circular
                     font-weight: 600
                     font-size: 16px
                     line-height: 16px
@@ -213,11 +213,13 @@ header
                     margin-right: 17px
 header
     &.header-fixed
+        box-shadow: 0 2px 5px 2px #e4c89542
         @include media(991)
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
     &.header-fixed,&.header-fit
         transition: .5s ease
-        --headerpadding: 14px
+        --headerpadding: 8px
+        // --headerpadding: 14px
         height: var(--headerfixed)
         @include media(768)
             height: 50px
@@ -240,17 +242,25 @@ footer
     .upper-sec
         background: #D6AE3A
         padding: 25px 0
+        @include media(678)
+            padding: 15px 0px
         .container
             display: flex
             justify-content: space-between
             align-items: center
+            @include media(768)
+                display: block
+                text-align: center
             .colA
                 p
-                    font-family: Lato
+                    font-family: $Circular
                     font-weight: 400
                     font-size: 24px
                     line-height: 24px
                     color: $black
+                    @include media(678)
+                        font-size: 20px
+                        margin-bottom: 10px
                     a
                         color: $black
             .colB
@@ -258,9 +268,14 @@ footer
                 justify-content: center
                 align-items: center
                 gap: 50px
+                @include media(678)
+                    display: block
                 .social-icon
                     display: flex
                     gap: 20px
+                    @include media(678)
+                        justify-content: center
+                        margin-bottom: 10px
                 .whatsapp
                     width: fit-content
                     gap: 10px
@@ -271,8 +286,12 @@ footer
                     align-items: center
                     gap: 10px
                     color: black
+                    border-radius: 2px
+                    @include media(678)
+                        margin: auto
+                        padding: 1px 20px
                     span
-                        font-family: Lato
+                        font-family: $Circular
                         font-weight: 600
                         font-size: 12px
                         line-height: 30px
@@ -282,48 +301,88 @@ footer
         .container
             padding: 50px 0
             p:nth-child(1)
-                font-family: Lato
-                font-weight: 600
+                font-family: $Circular
+                font-weight: 450
                 font-size: 13px
                 line-height: 24px
                 text-align: justify
-                color: $white
+                color: #ffffffb5
                 margin-bottom: 30px
+                @include media(768)
+                    max-width: 90%
+                    margin: auto
+                    line-height: 1.5
+                    margin-bottom: 15px 
+                    text-align-last: center
             p:nth-child(2)
-                font-family: Lato
+                font-family: $Circular
                 font-weight: 400
                 font-size: 13px
                 line-height: 24px
                 color: $white !important
                 margin: 30px 0
+                @include media(768)
+                    max-width: 90%
+                    margin: auto
+                    margin-bottom: 15px
+                    text-align: center
+
 
             .last-sec
                 display: flex
                 justify-content: space-between
                 align-items: center
+                @include media(678)
+                    flex-direction: column-reverse
+                    margin-bottom: 50px
                 .colA
                     display: flex
                     justify-content: start
-                    gap: 10px 
                     align-items: center
+                    span
+                        color: white
+                    @include media(678)
+                        display: block
+                        width: 100%
+                        & span
+                            display: none
                     p
                         margin: 0
+                        color: $white
+                        font-family: $Circular
+                        max-width: 100%
+                        
                     a
                         line-height: 0
+                        font-family: $Circular
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        gap: 10px
+                        color: white
+                        font-size: 13px
                     img
                         width: 57px
                         height: 21px
                 .colB
+                    @include media(768)
+                        margin-bottom: 15px
+                        width: 100%
                     ul
                         display: flex
                         justify-content: end
                         gap: 30px
+                        @include media(540)
+                            display: block
+                            text-align: center
+                            
                         li
                             transition: 0.3s ease
                             &:hover a
                                 color: #ffffffe0
                             a
                                 color: $white
+                                font-family: $Circular
 
 
 .ham-pop
@@ -331,7 +390,7 @@ footer
     max-width: 480px
     transform: translateX(100%)
     transition: .5s ease
-    background-color: #042011
+    background: linear-gradient(360deg,#FFEAC5 29%, #FFEAC5 100%)
     &.is-open
         transform: translateX(0%)
     .close
@@ -349,7 +408,7 @@ footer
             padding: 40px 20px
 
         .logo
-            margin-bottom: 70px
+            margin-bottom: 50px
         .ico
             max-width: 70px
             margin-bottom: 55px
@@ -358,7 +417,7 @@ footer
                 width: 100%
                 height: auto
         .nav-list
-            flex: 1
+            // flex: 1
             >li
                 &:not(:last-child)
                     margin-bottom: 22px
@@ -367,7 +426,7 @@ footer
                 >a
                     font-size: 28px
                     line-height: 1.06
-                    color: $white
+                    color: $black
                     display: inline-block
                     transition: 0.5s ease
                     @include font(500)
@@ -380,7 +439,7 @@ footer
                         padding-left: 20px
                     
         .bottom-list
-            border-top: 1px solid #ccc
+            border-top: 1px solid black
             margin-top: 2rem
             padding-top: 1rem
             display: flex
@@ -413,9 +472,9 @@ footer
                         path
                             transition: none
                             &[stroke],&[fill="none"]
-                                stroke: currentColor
+                                stroke: black
                             &[fill]
-                                fill: currentColor
+                                fill: black
                         &:hover
                             path
                                 &[fill]
@@ -432,7 +491,7 @@ footer
     right: 0
     transform: translateX(100%)
     transition: .5s ease
-    background: #042011
+    background: linear-gradient(360deg,#FFEAC5 29%, #FFEAC5 100%)
     &.is-open
         transform: translateX(0%)
     .model-body
@@ -447,63 +506,36 @@ footer
             margin-bottom: 2rem
             h4
                 font-size: 32px
-                color: $white
+                color: $black
+                font-family: $Florania
                 @include font(500)
             p
-                color: #d1d1d1
+                color: $black
                 margin-top: 10px
                 font-size: 14px
                 line-height: 20px
                 max-width: 317px
                 margin-left: auto
                 margin-right: auto
+                font-family: $Circular
                 @include media(675)
                     font-size: 14px
                     max-width: 300px
         .form
             --gaptb: 15px
         .submit-btn
-            color: var(--primary)
-            border: 1px solid var(--primary)
-            // border-width: 2px
-            border-width: 0.1em
+            background: #D6AE3A
+            width: 161px
+            height: 40px
+            gap: 10px
+            padding: 5px 10px
             border-radius: 25px
-            padding: 8px 17px
-            font-weight: 500
-            text-transform: capitalize
-            width: 99px
-            position: relative
-            transition: all ease 0.4s
-            overflow: hidden
-            margin: 20px auto
-            &:hover::after
-                bottom: 0
-                border-radius: 0
-                transition: all ease 0.4s
-            &::after
-                content: ""
-                position: absolute
-                height: 100%
-                width: 100%
-                background-color: $primary
-                left: 0
-                bottom: -100%
-                border-radius: 50%
-                // visibility: hidden
-            &:hover a
-                color: $black
-            a
-                border-radius: 25px
-                // padding: 14px 24px
-                font-family: Poppins
-                font-weight: 600
-                font-size: 16px
-                line-height: 16px
-                text-align: center
-                text-decoration: none
-                color: var(--primary)
-                z-index: 9  
-                position: relative
+            font-weight: 600
+            transition: 0.5s ease-in-out
+            margin: auto
+            margin-top: 30px
+            &:hover
+                background: #e1ac0a 
 
 .video-pop
     left: 0
@@ -554,579 +586,6 @@ footer
             border: 2px solid $white
             background: $white
 
-.about-pop
-    left: 0
-    right: 0
-    background: var(--bgcolor)
-    // background: linear-gradient(360deg, rgba(4, 32, 17, 0) -100.63%, #042011 50.4%)
-    z-index: 90
-    max-width: 100%
-    transform: translateY(100%)
-    transition: .5s ease
-    &.is-open
-        transform: translateY(0%)
-    .close-about-pop
-        position: absolute
-        bottom: calc(100% + 20px)
-        top: 20px
-        right: 10px
-        height: 50px
-        width: 150px
-        border-radius: 50%
-        display: flex
-        align-items: center
-        color: $white
-        justify-content: center
-        transition: 0.5s ease
-        font-family: Poppins
-        font-weight: 500
-        font-size: 17px
-        line-height: 25px
-        text-transform: uppercase
-        @include media(675)
-            right: -30px
-        // &:hover
-        //     background: $primary
-        svg
-            height: 50%
-            width: 40%
-        path
-            stroke-width: 2
-            stroke: $white
-    .model-body
-        position: absolute
-        top: 50%
-        left: 50%
-        translate: -50% -50%
-        width: 100%
-        max-width: 100%
-        height: 100vh
-        @include media(675)
-            max-width: 95%
-        .about-us-content
-            // border: 1px solid white
-            max-width: 800px
-            height: 376px
-            position: relative
-            top: 150px
-            margin: auto
-            .about-tab-nav
-                display: flex
-                justify-content: space-between
-                width: 341px
-                margin: auto
-                margin-bottom: 70px
-                li
-                    opacity: 0.4
-                .active
-                    opacity: 1
-                    transition: 0.5s
-                li span a
-                    font-family: Poppins
-                    font-weight: 600
-                    font-size: 36px
-                    line-height: 25px
-                    color: var(--primary)
-
-            .tab-nav-content
-                .about-tab-nav-content p
-                    font-family: Poppins
-                    font-weight: 500
-                    font-size: 16px
-                    line-height: 24px
-                    text-align: center
-                    max-width: 637px
-                    margin: auto
-
-
-.product-pop
-    left: 0
-    right: 0
-    background-image: url("../../images/home/product-bg.jpg")
-    background-repeat: no-repeat
-    background-size: cover
-    // width: 100%
-    // background: linear-gradient(360deg, rgba(4, 32, 17, 0) -100.63%, #042011 50.4%)
-    z-index: 90
-    max-width: 100%
-    transform: translateY(100%)
-    transition: .5s ease
-    &.is-open
-        transform: translateY(0%)
-    .close-product-pop
-        position: absolute
-        bottom: calc(100% + 20px)
-        top: 20px
-        right: 10px
-        height: 50px
-        width: 150px
-        border-radius: 50%
-        display: flex
-        align-items: center
-        color: $white
-        justify-content: center
-        transition: 0.5s ease
-        font-family: Poppins
-        font-weight: 500
-        font-size: 17px
-        line-height: 25px
-        text-transform: uppercase
-        z-index: 100
-        @include media(675)
-            right: -20px
-            top: 7px
-        // &:hover
-        //     background: $primary
-        svg
-            height: 50%
-            width: 40%
-        path
-            stroke-width: 2
-            stroke: $white
-    .model-body
-        background: linear-gradient(360deg, rgba(4, 32, 17, 0) -100.63%, #042011 50.4%)
-        position: absolute
-        top: 50%
-        left: 50%
-        translate: -50% -50%
-        width: 100%
-        max-width: 100%
-        height: 100vh
-        @include media(675)
-            max-width: 100%
-        .product-us-content
-            // border: 1px solid white
-            max-width: 100%
-            // height: auto
-            position: relative
-            top: 70px
-            display: flex
-            justify-content: space-between
-            gap: 50px
-            @include media(540)
-                display: block
-                top: 100px
-            .box
-                // border: 1px solid yellow
-            .left 
-                width: 60%
-                @include media(540)
-                    width: 100%
-                .heading
-                    .title
-                        h1
-                            font-family: Poppins
-                            font-weight: 600
-                            font-size: 60px
-                            line-height: 25px
-                            color: $white
-                            margin-bottom: 35px
-                            @include media(540)
-                                font-size: 50px
-                    .subtitle
-                        h4
-                            font-family: Poppins
-                            font-weight: 500
-                            font-size: 24px
-                            line-height: 25px
-                            color: $white
-                            @include media(540)
-                                font-size: 22px
-                .content
-                    padding: 0px 0 30px 0
-                    border-right: 1px solid #fff
-                    width: 90%
-                    margin-top: 30px
-                    .desc
-                        padding-right: 40px
-                        height: 310px
-                        overflow-y: auto
-                        margin-right: -4px
-                        p 
-                            font-size: 16px
-                            line-height: 24px
-                            font-weight: 400
-                            padding-bottom: 10px
-                            color: $text
-                            @include media(540)
-                                font-size: 14px
-                                line-height: 1.5
-                        h2 
-                            font-size: 36px
-                            line-height: 36px
-                            margin-bottom: 15px 
-                            margin-top: 50px
-                            color: $white
-                            
-                        h3 
-                            font-size: 28px
-                            line-height: 28px
-                            margin-bottom: 15px
-                            margin-top: 50px
-                            color: $white
-
-                            @include media(540)
-                                font-size: 22px
-                                line-height: 26px 
-                                
-
-                        h4 
-                            font-size: 24px
-                            line-height: 24px
-                            margin-bottom: 15px
-                            margin-top: 50px
-                            color: $white
-                            font-weight: 600
-
-                        h5
-                            font-size: 20px
-                            line-height: 20px
-                            margin-bottom: 15px
-                            margin-top: 50px
-                            color: $white
-                            font-weight: 600
-
-                            @include media(540)
-                                font-size: 18px
-                                line-height: 18px
-                        h6
-                            font-size: 16px
-                            line-height: 18px
-                            margin-bottom: 15px
-                            margin-top: 50px
-                            color: $white
-
-                        
-                        ul
-                            margin-left: 10px
-                            margin-top: 15px
-                            position: relative
-                            @include media(540)
-                                margin-left: 0
-                        li
-                            margin-left: 10px
-                            font-size: 16px
-                            line-height: 24px
-                            color: var(--white)
-                            padding-bottom: 20px
-                            padding-left: 50px
-                            position: relative
-                            &::before
-                                content: ""
-                                background:  url('../../icon/list-style-icon.svg') no-repeat center
-                                width: 30px
-                                height: 30px
-                                position: absolute
-                                top: -3px
-                                left: 0
-                        
-                        // li::marker
-                            // font-size: 22px 
-                            // top: 0
-                            // left: 0px
-                            // width: 5%
-                            // height: 67%
-                            // background-repeat: no-repeat
-                            // content: ""
-                            // position: absolute
-                            // background: url(../../icon/list-style-icon.svg)
-                .product-btn
-                    display: flex 
-                    gap: 30px
-                    margin-top: 30px
-                    // .whatsapp a
-                    //     width: 163px
-                    //     height: 46px
-                    //     top: 625px
-                    //     left: 77px
-                    //     border-radius: 25px
-                    //     gap: 10px
-                    //     border: 1px solid $primary
-                    //     padding: 13px 24px
-                    //     display: flex
-                    //     align-items: center
-                    //     color: $primary
-                    .whatsapp
-                        .submit-btn
-                            color: var(--primary)
-                            border: 1px solid var(--primary)
-                            // border-width: 2px
-                            border-width: 0.1em
-                            border-radius: 25px
-                            padding: 10px 24px
-                            // font-weight: 500
-                            text-transform: capitalize
-                            width: 141px
-                            position: relative
-                            transition: all ease 0.4s
-                            overflow: hidden
-                            &:hover::after
-                                bottom: 0
-                                border-radius: 0
-                                transition: all ease 0.4s
-                            &::after
-                                content: ""
-                                position: absolute
-                                height: 100%
-                                width: 100%
-                                background-color: $primary
-                                left: 0
-                                bottom: -100%
-                                border-radius: 50%
-                                // visibility: hidden
-                            &:hover a
-                                color: $black
-                            a
-                                border-radius: 25px
-                                // padding: 14px 24px
-                                font-family: Poppins
-                                font-weight: 600
-                                font-size: 16px
-                                line-height: 16px
-                                text-align: center
-                                text-decoration: none
-                                color: var(--primary)
-                                z-index: 9  
-                                position: relative
-
-                    .enquire-now a
-                        width: 150px
-                        height: 46px
-                        font-weight: 500
-                        border-radius: 25px
-                        gap: 10px
-                        background: $primary
-                        border: 1px solid $primary
-                        padding: 13px 24px
-                        display: flex
-                        justify-content: center
-                        align-items: center
-                        color: $black
-
-
-            .right
-                width: 40%
-                @include media(540)
-                    display: none
-                .box-image
-                    // border: 1px solid pink
-                    // height: 517px
-                    width: 100%
-                    max-width: 80%
-                    margin: 30px auto 10px
-                    overflow: hidden
-                    img
-                        width: 100%
-                        height: 100%
-                        border-radius: 15px
-                        // &:hover
-                        //     transform: scale(1.1)
-                        //     transition: 0.5s
-
-
-.contact-pop
-    left: 0
-    right: 0
-    background: var(--bgcolor)
-    // background: linear-gradient(360deg, rgba(4, 32, 17, 0) -100.63%, #042011 50.4%)
-    z-index: 90
-    max-width: 100%
-    transform: translateY(100%)
-    transition: .5s ease
-    &.is-open
-        transform: translateY(0%)
-    .close-contact-pop
-        position: absolute
-        bottom: calc(100% + 20px)
-        top: 20px
-        right: 10px
-        height: 50px
-        width: 150px
-        border-radius: 50%
-        display: flex
-        align-items: center
-        color: $white
-        justify-content: center
-        transition: 0.5s ease
-        font-family: Poppins
-        font-weight: 500
-        font-size: 17px
-        line-height: 25px
-        text-transform: uppercase
-        @include media(675)
-            right: 0
-        // &:hover
-        //     background: $primary
-        svg
-            height: 50%
-            width: 40%
-        path
-            stroke-width: 2
-            stroke: $white
-    .model-body
-        position: absolute
-        top: 50%
-        left: 50%
-        translate: -50% -50%
-        width: 100%
-        max-width: 100%
-        height: 100%
-        overflow-y: auto
-        overflow-x: hidden
-        @include media(675)
-            max-width: 100%
-        .contact-us-content
-            max-width: 100%
-            height: 376px
-            position: relative
-            top: 70px
-            margin: auto
-            // border: 1px solid white
-            height: 100%
-            display: grid
-            grid-template-columns: 1fr 1px 1fr
-            gap: 10px
-            align-items: center
-            @include media(540)
-                display: block
-                height: auto
-            .box
-                // border: 1px solid yellow
-                padding: 20px
-                // padding-top: 40px
-                text-align: left
-            .left 
-                h1
-                    font-family: Poppins
-                    font-weight: 600
-                    font-size: 48px
-                    line-height: 25px
-                    color: var(--primary)
-                    margin-bottom: 20px
-                    margin-top: 30px
-                    text-transform: capitalize
-                .info .box
-                    display: flex
-                    justify-content: left
-                    gap: 25px
-                    .icon
-                        width: 42px
-                        img
-                            border: 1px solid white
-                            width: 49px
-                            border-radius: 40px
-                            padding: 10px
-
-                    .content
-                        .title h5
-                            font-family: Poppins
-                            font-weight: 500
-                            font-size: 18px
-                            line-height: 20px
-                            color: $white
-                            margin-bottom: 10px
-                        .description p,a
-                            font-family: Poppins
-                            font-weight: 500
-                            max-width: 300px
-                            font-size: 14px
-                            line-height: 20px
-                            color: $text
-                            margin-bottom: 10px
-                            text-decoration: none
-                        .get-direction-btn 
-                            transition: 0.5s ease-in-out
-                            
-                            button
-                                font-family: Poppins
-                                font-weight: 500
-                                font-size: 12px
-                                line-height: 20px
-                                color: $primary
-                                display: flex
-                                justify-content: space-between
-                                align-items: center
-                                gap: 4px
-                                transition: 0.5s ease
-                                &:hover
-                                    img
-                                        transition: 0.5s ease
-                                        padding-left: 10px
-
-            .right
-                padding: 20px 80px
-                @include media(540)
-                    padding: 0
-                h3
-                    color: $primary
-                    font-family: Poppins
-                    font-weight: 600
-                    font-size: 24px
-                    line-height: 25px
-                    margin-bottom: 20px
-
-                p
-                    font-family: Poppins
-                    font-weight: 500
-                    font-size: 14px
-                    line-height: 20px
-                    color: $text
-                    margin-bottom: 30px
-                form
-                    width: 396px
-                    .form-grid
-                        --gaptb: 20px
-                    .sbmt-grp
-                        .submit-btn
-                            color: var(--primary)
-                            border: 1px solid var(--primary)
-                            // border-width: 2px
-                            border-width: 0.1em
-                            border-radius: 25px
-                            padding: 6px 18px
-                            font-weight: 500
-                            text-transform: capitalize
-                            width: 141px
-                            position: relative
-                            transition: all ease 0.4s
-                            overflow: hidden
-                            &:hover::after
-                                bottom: 0
-                                border-radius: 0
-                                transition: all ease 0.4s
-                            &::after
-                                content: ""
-                                position: absolute
-                                height: 100%
-                                width: 100%
-                                background-color: $primary
-                                left: 0
-                                bottom: -100%
-                                border-radius: 50%
-                                // visibility: hidden
-                            &:hover a
-                                color: $black
-                            a
-                                border-radius: 25px
-                                // padding: 14px 24px
-                                font-family: Poppins
-                                font-weight: 600
-                                font-size: 16px
-                                line-height: 16px
-                                text-align: center
-                                text-decoration: none
-                                color: var(--primary)
-                                z-index: 9  
-                                position: relative
-                            
-
-            .vertical-line
-                background-color: #FFFFFF33
-                width: 1px
-                height: 100%
-
-
-
 .footer-strip
     position: fixed
     bottom: 0
@@ -1149,21 +608,22 @@ footer
                 align-items: center
                 padding: 10px
                 gap: 5px
-                color: $white
+                color: $black
                 font-size: 14px
                 height: var(--footerstrip)
+                font-family: $Circular
                 svg
                     width: 20px
                     height: 20px
                     &[stroke]
                         stroke: $white
                     &[fill]
-                        fill: $white
+                        fill: $black
                     path
                         &[stroke]
                             stroke: $white
                         &[fill]
-                            fill: $white
+                            fill: $black
 
 
 @keyframes zoomIn

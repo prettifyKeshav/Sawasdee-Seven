@@ -18,15 +18,19 @@ html
     margin-bottom: 0 !important
 
 :root
-    --headerpadding: 35px
-    --headerheight: 118px
-    --headerfixed: 65px
+    --headerpadding: 12px
+    --headerheight: 121px
+    --headerfixed: 90px
+    // --headerpadding: 5px
+    // --headerheight: 118px
+    // --headerfixed: 65px
+    
     @include media(768)
         --headerfixed: 50px
     --footerstrip: 66px
     // New Variable define=================
     --primary: #000000
-    --bgcolor: #E4C995
+    --bgcolor: #FFEAC5
     // New Variable define=================
 
     --secondary: #E4C995
@@ -92,13 +96,14 @@ body,html
     line-height: 1.5
     font-optical-sizing: auto
     font-style: normal
-    font-family: $Poppins
+    font-family: $Florania  
     font-weight: normal
 b
     @include font(500)
 
 p
     color: $text
+    font-family: $Circular
 
 small
     font-size: 14px
@@ -371,8 +376,7 @@ button
     top: 0
     z-index: 5
     opacity: 0
-    // background: rgb(0 0 0 /.5)
-    background: #BFDC8075
+    background: #00000059
     transform: translateY(100%)
     transition: 0s ease .5s,opacity .5s ease
     cursor: pointer
@@ -479,7 +483,7 @@ button
                 top: 20px
                 right: 20px
             path
-                stroke: $white
+                stroke: $black
 
 .form-grid
     --item: 1

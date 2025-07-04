@@ -64,6 +64,7 @@
             transition: .3s ease
             user-select: none
             pointer-events: none
+            font-family: $Circular
         input,textarea
             height: calc(var(--inputsize) - var(--borderwidth))
             border: none
@@ -73,7 +74,7 @@
             background: none
             color: var(--black)
             font-size: inherit
-            font-family: inherit
+            font-family: $Circular
             padding: 0 var(--paddingleftright)
             &:focus
                 outline: none
@@ -103,7 +104,7 @@
             background: none
             color: var(--black)
             font-size: inherit
-            font-family: inherit
+            font-family: $Circular
             line-height: 1.2
             cursor: initial
             @include scrollbar(2px,none,$black,15px)
@@ -170,7 +171,7 @@
                 &::before
                     content: var(--filenameinitial)
                     z-index: 2
-                    font-family: inherit
+                    font-family: $Circular
                     font-size: inherit
                     line-height: calc(var(--inputsize) - var(--borderwidth))
                     padding-left: var(--paddingleftright)
@@ -195,7 +196,7 @@
     max-width: 100%
     cursor: pointer
     display: block
-    font-family: inherit
+    font-family: $Circular
     height: var(--inputsize)
     position: relative
     transition: all .2s ease-in-out
