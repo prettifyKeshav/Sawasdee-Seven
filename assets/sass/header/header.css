@@ -403,7 +403,7 @@ html {
   --headerfixed: 90px;
   --footerstrip: 66px;
   --primary: #000000;
-  --bgcolor: #FFEAC5;
+  --bgcolor: #fff;
   --secondary: #E4C995;
   --gradient-a: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
   --gradient-b: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
@@ -2315,7 +2315,7 @@ footer .upper-sec .container .colA p {
   line-height: 24px;
   color: var(--black);
 }
-@media only screen and (max-width: 678px) {
+@media only screen and (max-width: 991px) {
   footer .upper-sec .container .colA p {
     font-size: 20px;
     margin-bottom: 10px;
@@ -2330,6 +2330,11 @@ footer .upper-sec .container .colB {
   align-items: center;
   gap: 50px;
 }
+@media only screen and (max-width: 991px) {
+  footer .upper-sec .container .colB {
+    gap: 30px;
+  }
+}
 @media only screen and (max-width: 678px) {
   footer .upper-sec .container .colB {
     display: block;
@@ -2338,6 +2343,11 @@ footer .upper-sec .container .colB {
 footer .upper-sec .container .colB .social-icon {
   display: flex;
   gap: 20px;
+}
+@media only screen and (max-width: 991px) {
+  footer .upper-sec .container .colB .social-icon {
+    gap: 15px;
+  }
 }
 @media only screen and (max-width: 678px) {
   footer .upper-sec .container .colB .social-icon {
@@ -2371,6 +2381,13 @@ footer .upper-sec .container .colB .whatsapp span {
   line-height: 30px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec {
+    max-width: var(--container);
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 footer .bottom-sec .container {
   padding: 50px 0;
 }
@@ -2382,6 +2399,12 @@ footer .bottom-sec .container p:nth-child(1) {
   text-align: justify;
   color: rgba(255, 255, 255, 0.7098039216);
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec .container p:nth-child(1) {
+    -moz-text-align-last: center;
+         text-align-last: center;
+  }
 }
 @media only screen and (max-width: 768px) {
   footer .bottom-sec .container p:nth-child(1) {
@@ -2401,6 +2424,12 @@ footer .bottom-sec .container p:nth-child(2) {
   color: var(--white) !important;
   margin: 30px 0;
 }
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec .container p:nth-child(2) {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   footer .bottom-sec .container p:nth-child(2) {
     max-width: 90%;
@@ -2414,6 +2443,13 @@ footer .bottom-sec .container .last-sec {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec .container .last-sec {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 678px) {
   footer .bottom-sec .container .last-sec {
     flex-direction: column-reverse;
@@ -2424,6 +2460,11 @@ footer .bottom-sec .container .last-sec .colA {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec .container .last-sec .colA {
+    justify-content: center;
+  }
 }
 footer .bottom-sec .container .last-sec .colA span {
   color: white;
@@ -2457,6 +2498,11 @@ footer .bottom-sec .container .last-sec .colA img {
   width: 57px;
   height: 21px;
 }
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec .container .last-sec .colB {
+    margin-top: 10px;
+  }
+}
 @media only screen and (max-width: 768px) {
   footer .bottom-sec .container .last-sec .colB {
     margin-bottom: 15px;
@@ -2467,6 +2513,12 @@ footer .bottom-sec .container .last-sec .colB ul {
   display: flex;
   justify-content: end;
   gap: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  footer .bottom-sec .container .last-sec .colB ul {
+    justify-content: center;
+    gap: 18px;
+  }
 }
 @media only screen and (max-width: 540px) {
   footer .bottom-sec .container .last-sec .colB ul {
