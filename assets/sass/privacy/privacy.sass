@@ -4,10 +4,11 @@ body
 
 .privacy-secA
     margin-top: var(--headerheight)
-    padding: 5rem 0
+    padding: 0 0 5rem 0
     .website-content
         h1,h2,h3,h4,h5,h6,b
-            color: $white
+            color: $black
+            font-family: Florania Trial
 
 .banner
     &.thanks-banner
@@ -15,7 +16,12 @@ body
         display: flex
         align-items: center
         justify-content: center
+        margin-top: 0
+        height: 100vh
         .content
+            h1
+                margin: auto
+                font-family: Florania Trial
             p 
                 font-size: 16px
                 color:#666
@@ -90,7 +96,19 @@ body
                     color: #666666
                     text-align: justify
                     margin-bottom: 10px
-
+            .back-btn 
+                margin-top: 20px
+                a
+                    background: #D6AE3A
+                    width: 161px
+                    height: 40px
+                    gap: 10px
+                    padding: 10px 15px
+                    border-radius: 25px
+                    font-weight: 600
+                    transition: 0.5s ease-in-out
+                    margin: auto
+                    color: white
 
 .faq-secA
     padding: 56px 0 158px
@@ -204,4 +222,4 @@ body
                                                 color: $black
                                             &:not(:last-child)
                                                 margin-bottom: 5px
-                                            
+

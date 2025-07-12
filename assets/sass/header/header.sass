@@ -42,7 +42,7 @@ header
                 img
                     height: 100%
                     @include media(540)
-                        width: 145px
+                        // width: 145px
         .colB
             flex: 1
             display: flex
@@ -162,15 +162,17 @@ header
                         background: var(--black)
         .nav-a
             .enq
-                width: 137px
                 height: 40px
                 border-radius: 25px
 
                 border: 2px solid $primary
-                padding: 10px 16px
+                padding: 10px 20px
                 position: relative
                 transition: all ease 0.4s
                 overflow: hidden
+                &:hover
+                    background: #D6AE3A
+                    border-color: #D6AE3A
                 &:hover a
                     color: $black
                 a
@@ -221,8 +223,8 @@ header
         --headerpadding: 8px
         // --headerpadding: 14px
         height: var(--headerfixed)
-        @include media(768)
-            height: 50px
+        @include media(991)
+            height: 70px
         &::after
             height: 100%
     &.header-fit
@@ -352,6 +354,8 @@ footer
                 @include media(678)
                     flex-direction: column-reverse
                     margin-bottom: 50px
+                @include media(540)
+                    display: flex
                 .colA
                     display: flex
                     justify-content: start
@@ -414,7 +418,7 @@ footer
     max-width: 480px
     transform: translateX(100%)
     transition: .5s ease
-    background: linear-gradient(360deg,#FFEAC5 29%, #FFEAC5 100%)
+    background: white
     &.is-open
         transform: translateX(0%)
     .close
@@ -616,8 +620,9 @@ footer
     left: 0
     right: 0
     z-index: 40
-    background: var(--bgcolor)
+    background: $black
     display: none
+    box-shadow: rgba(99, 99, 99, 0.2) 2px -7px 14px 0px
     @include media(675)
         display: block
     ul
@@ -632,7 +637,7 @@ footer
                 align-items: center
                 padding: 10px
                 gap: 5px
-                color: $black
+                color: #D6AE3A
                 font-size: 14px
                 height: var(--footerstrip)
                 font-family: $Circular
@@ -640,14 +645,14 @@ footer
                     width: 20px
                     height: 20px
                     &[stroke]
-                        stroke: $white
+                        stroke: #D6AE3A
                     &[fill]
-                        fill: $black
+                        fill: #D6AE3A
                     path
                         &[stroke]
-                            stroke: $white
+                            stroke: #D6AE3A
                         &[fill]
-                            fill: $black
+                            fill: #D6AE3A
 
 
 @keyframes zoomIn

@@ -17,10 +17,11 @@ body {
 
 .privacy-secA {
   margin-top: var(--headerheight);
-  padding: 5rem 0;
+  padding: 0 0 5rem 0;
 }
 .privacy-secA .website-content h1, .privacy-secA .website-content h2, .privacy-secA .website-content h3, .privacy-secA .website-content h4, .privacy-secA .website-content h5, .privacy-secA .website-content h6, .privacy-secA .website-content b {
-  color: var(--white);
+  color: var(--black);
+  font-family: Florania Trial;
 }
 
 .banner.thanks-banner {
@@ -28,6 +29,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
+  height: 100vh;
+}
+.banner.thanks-banner .content h1 {
+  margin: auto;
+  font-family: Florania Trial;
 }
 .banner.thanks-banner .content p {
   font-size: 16px;
@@ -117,6 +124,21 @@ body {
   color: #666666;
   text-align: justify;
   margin-bottom: 10px;
+}
+.banner.thanks-banner .content .back-btn {
+  margin-top: 20px;
+}
+.banner.thanks-banner .content .back-btn a {
+  background: #D6AE3A;
+  width: 161px;
+  height: 40px;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+  margin: auto;
+  color: white;
 }
 
 .faq-secA {

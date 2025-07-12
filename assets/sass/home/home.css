@@ -1184,6 +1184,7 @@
   position: relative;
   overflow: hidden;
   line-height: 0;
+  height: 100vh;
 }
 @media only screen and (max-width: 991px) {
   .home-secJ figure {
@@ -1660,10 +1661,11 @@
   padding: 5px 10px;
   border-radius: 25px;
   font-weight: 600;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .home-secP .form-sec form .submit-btn:hover {
-  background: #e1ac0a;
+  border: 1px solid black;
+  background: white;
 }
 
 .home-secQ {
@@ -1706,6 +1708,7 @@
 }
 @media only screen and (max-width: 540px) {
   .home-secQ .flex-box {
+    max-width: 100%;
     display: block;
   }
 }
@@ -1752,6 +1755,12 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .home-secQ .flex-box .flex-box-item:last-child h2 {
+    max-width: 100%;
+    font-size: 30px;
+  }
 }
 .home-secQ .flex-box .flex-box-item:last-child p {
   font-weight: 450;
